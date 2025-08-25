@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".JerryActivity2">
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="255dp"
+                android:layout_marginBottom="24dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back"
+                android:src="@drawable/ic_arrow_left" />
+
+            <ImageButton
+                android:id="@+id/backButton1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back"
+                android:foregroundGravity="right"
+                android:src="@drawable/ic_arrow_right"
+                tools:layout_editor_absoluteX="520dp"
+                tools:layout_editor_absoluteY="26dp" />
+        </LinearLayout>
+
+        <!-- Card Image -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/buttons"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="70dp"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:text="Add Card"
+            android:textAlignment="center"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/card_image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="68dp"
+            android:layout_marginBottom="16dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/visa_card_image" />
+
+        <!-- Full Name Text Field -->
+        <TextView
+            android:id="@+id/full_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_image"
+            android:layout_marginTop="30dp"
+            android:text="Full Name"
+            android:textColor="#4A4A4A"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/full_name"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/full_name_label"
+            android:layout_marginTop="8dp"
+            android:hint="Russel Hassano"
+            android:textColor="#000000"
+            android:background="@drawable/edit_text_bg"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"/>
+
+        <!-- Card Number Text Field -->
+        <TextView
+            android:id="@+id/card_number_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Card Number"
+            android:textColor="#4A4A4A"
+            android:textSize="14sp"
+            android:layout_below="@id/full_name"
+            android:layout_marginTop="24dp" />
+
+        <EditText
+            android:id="@+id/card_number"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/card_number_label"
+            android:layout_marginTop="8dp"
+            android:hint="1234 5678 908"
+            android:textColor="#000000"
+            android:background="@drawable/edit_text_bg"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"/>
+
+        <!-- Expiry Date and CVV fields -->
+        <LinearLayout
+            android:id="@+id/expiry_and_cvv_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/card_number"
+            android:layout_marginTop="24dp">
+
+            <!-- Expiry Date -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/expiry_date_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expiry Date"
+                    android:textColor="#4A4A4A"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/expiry_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="12/2022"
+                    android:textColor="#000000"
+                    android:background="@drawable/edit_text_bg"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"/>
+            </LinearLayout>
+
+            <!-- CVV -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cvv_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CVV"
+                    android:textColor="#4A4A4A"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/cvv"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="010"
+                    android:textColor="#000000"
+                    android:background="@drawable/edit_text_bg"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Add Card Button -->
+        <Button
+            android:id="@+id/add_card_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/expiry_and_cvv_layout"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#4CAF50"
+            android:text="Add Card"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

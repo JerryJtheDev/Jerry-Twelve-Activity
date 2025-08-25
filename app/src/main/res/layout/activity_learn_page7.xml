@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LearnPageActivity7">
+
+    <LinearLayout
+        android:id="@+id/linelayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="255dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back"
+            android:src="@drawable/ic_arrow_left" />
+
+        <ImageButton
+            android:id="@+id/backButton1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back"
+            android:foregroundGravity="right"
+            android:src="@drawable/ic_arrow_right"
+            tools:layout_editor_absoluteX="520dp"
+            tools:layout_editor_absoluteY="26dp" />
+    </LinearLayout>
+
+
+        <!-- Container with rounded top corners -->
+        <LinearLayout
+            android:id="@+id/bottomContainer"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:background="#F3CC6C"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:layout_marginTop="0dp"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:elevation="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+
+            <TextView
+                android:id="@+id/welcomeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bem - Vindo!"
+                android:textColor="#5C4B3A"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/welcomeSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dê o play na nostalgia, Faça login ou cadastre-se!"
+                android:textColor="#7D6B56"
+                android:textSize="14sp"
+                android:layout_marginBottom="24dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonLogin"
+                    android:layout_width="120dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="12dp"
+                    android:backgroundTint="#D9A862"
+                    android:text="Login"
+                    android:textColor="#5C4B3A"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/buttonRegister"
+                    android:layout_width="120dp"
+                    android:layout_height="48dp"
+                    android:backgroundTint="#FFF9E5"
+                    android:text="Sign up"
+                    android:textAllCaps="false"
+                    android:textColor="#5C4B3A" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Logo container -->
+        <LinearLayout
+            android:id="@+id/logoContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/bottomContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="100dp">
+
+
+
+            <TextView
+                android:id="@+id/logoPart1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="T"
+                android:textSize="40sp"
+                android:textColor="#C2915D"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/logoPart2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="#D9A862"
+                android:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/logoO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="O"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="#8B754A"
+                android:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/logoPart3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ca"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="#C2915D"
+                android:fontFamily="sans-serif" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/logoMusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="music"
+            android:textColor="#8B754A"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/logoContainer"
+            app:layout_constraintStart_toStartOf="@id/logoContainer"
+            app:layout_constraintEnd_toEndOf="@id/logoContainer"/>
+
+
+
+
+
+    <!--    <relativelayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#D9E6E2" android:padding="16dp">-->
+
+<!--        &lt;!&ndash; Container &ndash;&gt;-->
+<!--        <linearlayout android:id="@+id/container" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#F7FCF9" android:orientation="vertical" android:paddingtop="40dp" android:paddingbottom="40dp" android:paddingstart="24dp" android:paddingend="24dp" android:layout_centerinparent="true" android:layout_marginstart="24dp" android:layout_marginend="24dp" android:layout_margintop="24dp" android:layout_marginbottom="24dp" android:cliptopadding="false" android:clipchildren="false" android:gravity="center" android:layout_marginleft="24dp" android:layout_marginright="24dp" android:backgroundtintmode="src_over" android:backgroundtint="#F7FCF9" android:layout_gravity="center" android:layout_alignparenttop="true" android:layout_alignparentbottom="true" android:layout_alignparentstart="true" android:layout_alignparentend="true" android:layout_centerhorizontal="true" android:layout_centervertical="true" android:cliptooutline="true" android:elevation="4dp">-->
+
+<!--            &lt;!&ndash; Back arrow &ndash;&gt;-->
+<!--            <imagebutton android:id="@+id/backButton" android:layout_width="24dp" android:layout_height="24dp" android:layout_gravity="start" android:background="?attr/selectableItemBackgroundBorderless" android:src="@drawable/ic_arrow_left" android:tint="#9CA3AF" android:contentdescription="Back" android:layout_marginbottom="32dp">-->
+
+<!--                &lt;!&ndash; Title &ndash;&gt;-->
+<!--                <textview android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Confirm New\nAccount" android:textcolor="#1E293B" android:textsize="14sp" android:textstyle="bold" android:gravity="center" android:linespacingextra="2dp" android:layout_marginbottom="40dp">-->
+
+<!--                    &lt;!&ndash; Profile Image Background Circle &ndash;&gt;-->
+<!--                    <framelayout android:layout_width="96dp" android:layout_height="96dp" android:background="#FAD6BF" android:layout_gravity="center" android:layout_marginbottom="24dp" android:cliptooutline="true" android:layout_margintop="0dp" android:layout_marginstart="0dp" android:layout_marginend="0dp" android:foregroundgravity="center" android:padding="0dp" android:layout_centerhorizontal="true" android:layout_centervertical="false" android:layout_alignparenttop="false" android:layout_alignparentbottom="false" android:layout_alignparentstart="false" android:layout_alignparentend="false" android:backgroundtintmode="src_over" android:backgroundtint="#FAD6BF" android:clipchildren="false" android:elevation="0dp">-->
+
+<!--                        <imageview android:id="@+id/profileImage" android:layout_width="96dp" android:layout_height="96dp" android:scaletype="centerCrop" android:src="@drawable/profile_placeholder" android:contentdescription="Illustration of a young man with short dark hair wearing a green shirt on a peach circular background" android:layout_gravity="center" android:background="@drawable/circle_bg">-->
+<!--                        </imageview></framelayout>-->
+
+<!--                    &lt;!&ndash; Welcome Text &ndash;&gt;-->
+<!--                    <textview android:id="@+id/welcomeText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Welcome" android:textcolor="#94A3B8" android:textsize="12sp" android:layout_marginbottom="4dp" android:gravity="center">-->
+
+<!--                        &lt;!&ndash; Name Text &ndash;&gt;-->
+<!--                        <textview android:id="@+id/nameText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Arya Wijaya" android:textcolor="#1E293B" android:textsize="16sp" android:textstyle="bold" android:layout_marginbottom="40dp" android:gravity="center">-->
+
+<!--                            &lt;!&ndash; Create Account Button &ndash;&gt;-->
+<!--                            <button android:id="@+id/createAccountButton" android:layout_width="match_parent" android:layout_height="48dp" android:text="Create My Account" android:textcolor="#FFFFFF" android:textsize="14sp" android:textstyle="bold" android:backgroundtint="#2F9E44" android:background="@drawable/rounded_button" android:layout_margintop="0dp">-->
+
+
+
+
+<!--                                ```-->
+
+<!--                                **Additional notes:**-->
+
+<!--                                - You will need to create the following drawable resources:-->
+
+<!--                                1. `rounded_corners_3xl.xml` (for the container background with large rounded corners):-->
+
+<!--                                ```xml-->
+<!--                                <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">-->
+<!--                                    <solid android:color="#F7FCF9">-->
+<!--                                        <corners android:radius="32dp">-->
+<!--                                        </corners></solid></shape>-->
+<!--                                ```-->
+
+<!--                                2. `circle_bg.xml` (for the peach circular background behind the profile image):-->
+
+<!--                                ```xml-->
+<!--                                <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">-->
+<!--                                    <solid android:color="#FAD6BF">-->
+<!--                                    </solid></shape>-->
+<!--                                ```-->
+
+<!--                                3. `rounded_button.xml` (for the green rounded button):-->
+
+<!--                                ```xml-->
+<!--                                <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">-->
+<!--                                    <solid android:color="#2F9E44">-->
+<!--                                        <corners android:radius="24dp">-->
+<!--                                        </corners></solid></shape>-->
+<!--                                ```-->
+
+<!--                                4. `ic_arrow_left.xml` (for the back arrow icon) - you can use a vector drawable for a left arrow or use a material icon.-->
+
+<!--                                5. `profile_placeholder.png` - placeholder image for the profile picture (the illustrated young man with short dark hair wearing a green shirt on a peach circular background).-->
+
+<!--                                -&#45;&#45;-->
+
+<!--                                This layout is fully centered and matches the styling, colors, fonts, and spacing from the screenshot you provided.</button></textview></textview></textview></imagebutton></linearlayout></relativelayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
