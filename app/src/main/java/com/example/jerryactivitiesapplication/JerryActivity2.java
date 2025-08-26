@@ -13,20 +13,17 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class JerryActivity2 extends AppCompatActivity {
 
-    ImageButton back = findViewById(R.id.backButton);
-    ImageButton forward = findViewById(R.id.backButton1);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_jerry2);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
+
+        ImageButton back = findViewById(R.id.backButton);
+        ImageButton forward = findViewById(R.id.backButton1);
         back.setOnClickListener(view -> {
             Intent intent = new Intent(JerryActivity2.this, FormActivity2.class);
             startActivity(intent);

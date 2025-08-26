@@ -9,12 +9,49 @@
     tools:context=".LearnPage1Activity">
 
     <LinearLayout
+        android:id="@+id/linelayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="14dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="255dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back"
+            android:src="@drawable/ic_arrow_left" />
+
+        <ImageButton
+            android:id="@+id/backButton1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back"
+            android:foregroundGravity="right"
+            android:src="@drawable/ic_arrow_right"
+            tools:layout_editor_absoluteX="520dp"
+            tools:layout_editor_absoluteY="26dp" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center|center_vertical"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="15dp"
         tools:layout_editor_absoluteY="15dp">
+
+
+
 
         <ImageView
             android:id="@+id/imageView2"

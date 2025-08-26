@@ -13,23 +13,26 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class FormActivity3 extends AppCompatActivity {
-    private ImageButton btnBack;
 
-    private Button btnDog, btnCat, btnChick;
-    private Button btnMale, btnFemale;
-    private Button btnSmall, btnMedium, btnLarge;
-    private Button btnYoung, btnAdult, btnSenior;
-    private Button btnViewMatches;
-    private EditText etLocation;
-    private Spinner spinnerBreed;
-    private TextView tvClearAll;
 
+    Button btnDog, btnCat, btnChick;
+    Button btnMale, btnFemale;
+    Button btnSmall, btnMedium, btnLarge;
+    Button btnYoung, btnAdult, btnSenior;
+    Button btnViewMatches;
+    EditText etLocation;
+    Spinner spinnerBreed;
+    TextView tvClearAll;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_form3);
+
+        ImageButton btnBack;
+
+
 
         etLocation = findViewById(R.id.etLocation);
         spinnerBreed = findViewById(R.id.spinnerBreed);

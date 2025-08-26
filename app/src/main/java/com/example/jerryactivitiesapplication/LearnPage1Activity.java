@@ -13,19 +13,16 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class LearnPage1Activity extends AppCompatActivity {
 
-    ImageButton back = findViewById(R.id.backButton);
-    ImageButton forward = findViewById(R.id.backButton1);
+    ImageButton back= findViewById(R.id.backButton);
+    ImageButton forward = findViewById(R.id.backButton);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_learnpage1);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+
 
         back.setOnClickListener(view -> {
             Intent intent = new Intent(LearnPage1Activity.this, JerryActivity2.class);
