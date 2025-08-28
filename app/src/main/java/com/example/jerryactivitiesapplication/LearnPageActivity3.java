@@ -13,8 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class LearnPageActivity3 extends AppCompatActivity {
 
-    ImageButton back = findViewById(R.id.backButton);
-    ImageButton forward = findViewById(R.id.backButton1);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +21,8 @@ public class LearnPageActivity3 extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_learn_page3);
 
+        ImageButton back = findViewById(R.id.backButton);
+        ImageButton forward = findViewById(R.id.backButton1);
 
         back.setOnClickListener(view -> {
             Intent intent = new Intent(LearnPageActivity3.this, LearnPageActivity2.class);

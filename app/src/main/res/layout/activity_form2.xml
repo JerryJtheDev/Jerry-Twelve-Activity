@@ -26,6 +26,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:layout_marginTop="30dp"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
             android:paddingTop="10dp">
@@ -34,7 +35,7 @@
                 android:id="@+id/backButton"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginEnd="255dp"
+                android:layout_marginEnd="205dp"
                 android:layout_marginBottom="24dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="Back"

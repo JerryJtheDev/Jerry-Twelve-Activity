@@ -11,165 +11,155 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#D9E6DD"
-        android:gravity="center|top"
+        android:gravity="top|center_horizontal"
         android:orientation="vertical"
         android:padding="24dp">
 
+        <!-- Back & Forward Buttons Row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
 
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"
-            android:background="@drawable/rounded_corners_24dp"
-            android:backgroundTint="#D9E6DD"
-            android:clipChildren="false"
-            android:clipToPadding="false"
-            android:gravity="start"
-            android:orientation="vertical"
-            android:padding="24dp">
-
-            <LinearLayout
-                android:id="@+id/linelayout"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="20dp"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:id="@+id/backButton"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_marginEnd="255dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="Back"
-                    android:src="@drawable/ic_arrow_left" />
-
-                <ImageButton
-                    android:id="@+id/backButton1"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="Back"
-                    android:foregroundGravity="right"
-                    android:src="@drawable/ic_arrow_right"
-                    tools:layout_editor_absoluteX="520dp"
-                    tools:layout_editor_absoluteY="26dp" />
-            </LinearLayout>
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back"
+                android:src="@drawable/ic_arrow_left"
+                android:layout_marginEnd="32dp" />
 
             <TextView
-                android:id="@+id/title"
+                android:id="@+id/paymentTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:fontFamily="@font/montserrat_semibold"
-                android:text="What Type of Job Your Looking For?"
+                android:text="Jobs"
                 android:textColor="#111827"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_marginEnd="32dp" />
 
-            <TextView
-                android:id="@+id/subtitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:fontFamily="@font/montserrat_semibold"
-                android:text="Choose 3-4 job categories and well click the job vacancy for you"
-                android:textColor="#6B7280"
-                android:textSize="12sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:divider="?android:attr/dividerVertical"
-                android:dividerPadding="12dp"
-                android:orientation="vertical"
-                android:showDividers="middle">
-
-                <CheckBox
-                    android:id="@+id/checkbox_designer1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:buttonTint="#22A55F"
-                    android:checked="true"
-                    android:drawablePadding="12dp"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:paddingVertical="8dp"
-                    android:text="Designer"
-                    android:textColor="#374151"
-                    android:textSize="14sp" />
-
-                <CheckBox
-                    android:id="@+id/checkbox_designer2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:buttonTint="#22A55F"
-                    android:checked="true"
-                    android:drawablePadding="12dp"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:paddingVertical="8dp"
-                    android:text="Designer"
-                    android:textColor="#374151"
-                    android:textSize="14sp" />
-
-                <CheckBox
-                    android:id="@+id/checkbox_developer"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:buttonTint="#22A55F"
-                    android:checked="false"
-                    android:drawablePadding="12dp"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:paddingVertical="8dp"
-                    android:text="Developer"
-                    android:textColor="#374151"
-                    android:textSize="14sp" />
-
-                <CheckBox
-                    android:id="@+id/checkbox_designer3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:buttonTint="#22A55F"
-                    android:checked="false"
-                    android:drawablePadding="12dp"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:paddingVertical="8dp"
-                    android:text="Designer"
-                    android:textColor="#374151"
-                    android:textSize="14sp" />
-
-                <CheckBox
-                    android:id="@+id/checkbox_designer4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:buttonTint="#22A55F"
-                    android:checked="false"
-                    android:drawablePadding="12dp"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:paddingVertical="8dp"
-                    android:text="Designer"
-                    android:textColor="#374151"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/continueButton"
-                android:layout_width="match_parent"
+            <ImageButton
+                android:id="@+id/forwardButton"
+                android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="24dp"
-                android:backgroundTint="#22A55F"
-                android:text="Continue"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Forward"
+                android:src="@drawable/ic_arrow_right" />
         </LinearLayout>
 
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="What Type of Job You're Looking For?"
+            android:textColor="#111827"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Choose 3-4 job categories and we’ll click the job vacancy for you"
+            android:textColor="#6B7280"
+            android:textSize="12sp" />
+
+        <!-- Checkboxes Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="?android:attr/dividerVertical"
+            android:dividerPadding="12dp"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <CheckBox
+                android:id="@+id/checkbox_designer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#22A55F"
+                android:checked="true"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:paddingVertical="8dp"
+                android:text="Designer"
+                android:textColor="#374151"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_designer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#22A55F"
+                android:checked="true"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:paddingVertical="8dp"
+                android:text="Designer"
+                android:textColor="#374151"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_developer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#22A55F"
+                android:checked="false"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:paddingVertical="8dp"
+                android:text="Developer"
+                android:textColor="#374151"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_designer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#22A55F"
+                android:checked="false"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:paddingVertical="8dp"
+                android:text="Designer"
+                android:textColor="#374151"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_designer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#22A55F"
+                android:checked="false"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:paddingVertical="8dp"
+                android:text="Designer"
+                android:textColor="#374151"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Continue Button -->
+        <Button
+            android:id="@+id/continueButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#22A55F"
+            android:text="Continue"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

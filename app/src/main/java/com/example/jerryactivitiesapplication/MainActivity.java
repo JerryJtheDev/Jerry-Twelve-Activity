@@ -13,14 +13,16 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageButton back = findViewById(R.id.backButton);
-    ImageButton forward = findViewById(R.id.forwardButton);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
+        ImageButton back = findViewById(R.id.backButton);
+        ImageButton forward = findViewById(R.id.forwardButton);
         
 
         back.setOnClickListener(view -> {

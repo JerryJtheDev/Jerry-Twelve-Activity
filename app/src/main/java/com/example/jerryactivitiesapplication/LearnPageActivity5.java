@@ -13,8 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class LearnPageActivity5 extends AppCompatActivity {
 
-    ImageButton back = findViewById(R.id.backButton);
-    ImageButton forward = findViewById(R.id.backButton1);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +25,9 @@ public class LearnPageActivity5 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        ImageButton back = findViewById(R.id.backButton);
+        ImageButton forward = findViewById(R.id.backButton1);
 
         back.setOnClickListener(view -> {
             Intent intent = new Intent(LearnPageActivity5.this, LearnPageActivity4.class);
