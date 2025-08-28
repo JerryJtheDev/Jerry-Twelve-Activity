@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
         ImageButton back = findViewById(R.id.backButton);
         ImageButton forward = findViewById(R.id.forwardButton);
+
+
         
 
         back.setOnClickListener(view -> {
